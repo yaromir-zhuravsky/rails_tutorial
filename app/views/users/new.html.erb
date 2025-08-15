@@ -1,0 +1,14 @@
+<div>
+  <% if @user.errors.any? %>
+    <% @user.errors.full_messages.each do |message| %>
+      <h1><%= message %></h1>
+    <% end %>
+  <% end %>
+</div>
+
+<div>
+  <%= form_for @user do |form| %>
+    First name: <%= form.text_field :username %><br />
+    <%= form.submit %>
+  <% end %>
+</div>

@@ -1,1 +1,17 @@
 <h1>Posts</h1>
+
+<%= link_to "New user", new_user_path %>
+
+<table>
+  <tr>
+    <td>Id</td>
+    <td>Username</td>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.username %></td>
+      <td><%= link_to "Go to page", user_path(user.id) %></td>
+    </tr>
+  <% end %>
+</table>

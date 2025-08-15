@@ -1,0 +1,6 @@
+<div>
+  <div>ID: <%= @user.id %></div>
+  <div>Username: <%= @user.username %></div>
+</div>
+
+<%= link_to "Edit user", edit_user_path(@user.id) %>
