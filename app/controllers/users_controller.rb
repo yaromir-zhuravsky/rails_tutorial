@@ -29,7 +29,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @posts = Post.where(user_id: @user.id)
     respond_to do |format|
       format.html
       format.json do
